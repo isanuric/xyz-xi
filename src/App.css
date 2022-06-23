@@ -1,38 +1,237 @@
-.App {
+/* variables */
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, .8);
+}
+
+* {
+  margin: 0 ;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--dark);
+}
+
+body {
+  background: #ccc;
+}
+
+image {
+  max-width: 100%;
+}
+
+.wrapper {
+  /* display: grid; */
+  /* gap: 1rem; */
+}
+
+.button {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: .6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+}
+
+
+/* Navigation */
+.main-nav {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  width: 100%;
+  position: fixed;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.main-nav .logo {
+  /* background-color: var(--light); */
+  padding: .6rem;
+  text-transform: uppercase;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem;
+  list-style: none;
+}
+
+.main-nav a {
+  background: var(--dark);
+  color: var(--light);
+  /* display: block; */
+  text-decoration: none;
+  padding: .8rem;
   text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-nav a:hover {
+  background: var(--light);
+  color: var(--dark);
+  transition: .7s ease all;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Top Picture */
+.top-container {
+  min-height: 60rem;
+  background: url(assets/images/pexels-anni-roenkae-2317711.jpg);
+  background-size: cover;
+  background-position: center;
+  /* inside the container */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--light);
 }
 
-.App-link {
-  color: #61dafb;
+.top-container h1 {
+  font-size: 8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.top-container p {
+  max-width: 40rem;
+  padding: 0 2rem;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
+
+/* Container for general settings */
+.container {
+  padding: 10rem 5rem;
+}
+
+/* About */
+.cont-about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: rgb(18, 61, 28, .5);
+
+}
+
+.cont-about .text {
+  padding-right: 3rem;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cont-about .image {
+  background: url(assets/images/about.jpg);
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Service */
+.cont-services {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgb(13, 49, 21);
+}
+
+.cont-services h2 {
+  margin-bottom: 5rem;
+  color: var(--light);
+  text-align: center;
+  font-size: 3rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  background-color: rgb(13, 49, 21);
+}
+
+.services .service {
+  background: var(--light);
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  min-height: 20rem;
+}
+
+
+/* Content */
+
+
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: var(--light);
+  height: 8rem;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* Media Queries */
+@media(max-width: 1980px){
+  .container {
+    padding: 10rem 15rem;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+@media(max-width: 1200px){
+  .container {
+    padding: 10rem 5rem;
+  }
+}
+
+@media(max-width: 900px){
+
+  .top-container h1 {
+    font-size: 5rem;
+  }
+
+  .container {
+    padding: 10rem 5rem;
+  }
+}
+
+@media(max-width: 600px){
+  .main-nav .logo {
+   display: none;
+  }
+
+  .top-container {
+    min-height: 40rem;
+  }
+
+  .top-container h1 {
+    font-size: 4rem;
+  }
+  
+  .container {
+    padding: 10rem 2rem;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns:1fr;
   }
 }
