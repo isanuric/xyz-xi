@@ -4,9 +4,9 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
 import TopContainer from "./components/TopContainer";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Pictures from "./components/Pictures";
+import Picture from "./components/Picture";
+import Quote from "./components/Quote";
 
 function App() {
   return (
@@ -15,7 +15,8 @@ function App() {
       <TopContainer />
       <About />
       <Service />
-      <Pictures />
+      <Picture />
+      <Quote />
       <Footer />
     </Fragment>
   );

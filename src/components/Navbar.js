@@ -18,7 +18,10 @@ export default function Navbar() {
           <a href="#service">service</a>
         </li>
         <li>
-          <a href="#contact">contact</a>
+          <a href="#picture">picture</a>
+        </li>
+        <li>
+          <a href="#quote">Quote</a>
         </li>
       </ul>
     </div>

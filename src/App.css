@@ -4,6 +4,7 @@
   --dark: #333;
   --light: #fff;
   --shadow: 0 1px 5px rgba(104, 104, 104, .8);
+  --border: 1px solid #ccc;
 }
 
 * {
@@ -81,7 +82,7 @@ img {
 
 .main-nav ul {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   margin: 1rem;
   list-style: none;
 }
@@ -188,6 +189,93 @@ img {
 }
 
 
+/* Quote */
+.quote {
+  background-color: rgb(68, 61, 56);
+}
+
+.quote .es-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+    "qoute01 qoute02 qoute05"
+    "qoute03 qoute02 qoute04"
+    "qoute03 qoute06 qoute06";
+}
+
+#quote01 {
+  grid-area: qoute01;
+  border: var(--border);
+}
+
+#quote02 {
+  grid-area: qoute02;
+  border: var(--border);
+}
+
+#quote03 {
+  grid-area: qoute03;
+  border: var(--border);
+}
+
+#quote04 {
+  grid-area: qoute04;
+  border: var(--border);
+}
+
+#quote05 {
+  grid-area: qoute05;
+  border: var(--border);
+
+}
+
+#quote06 {
+  grid-area: qoute06;
+  border: var(--border);
+}
+
+.quote .title {
+  color: var(--dark);
+  text-align: right;
+  font-size: 10rem;
+}
+
+.quote .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .quote .card-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+} */
+
+.quote .card-image {
+  max-width: 8rem;
+  max-height: 8rem;
+  padding: 1rem;
+}
+
+.card-title {
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: .5rem;
+}
+
+.card-text {
+  color: var(--light);
+  font-size: .8rem;
+  font-weight: 100;
+}
+
+
 /* Footer */
 footer {
   background-color: var(--dark);
@@ -247,4 +335,18 @@ footer {
   .about {
     grid-template-columns: 1fr;
   }
+
+  /* Quote */
+  .quote .title {
+    font-size: 4rem;
+  }
+  .quote .es-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+      "qoute01 qoute02"
+      "qoute03 qoute04"
+      "qoute05 qoute06";
+  }
+
 }
