@@ -6,6 +6,7 @@ import Service from "./components/Service";
 import TopContainer from "./components/TopContainer";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Pictures from "./components/Pictures";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <TopContainer />
       <About />
       <Service />
-      <Contact />
+      <Pictures />
       <Footer />
     </Fragment>
   );

@@ -5,9 +5,10 @@ import { FaCss3Alt, FaReact } from "react-icons/fa";
 
 export default function Service() {
   return (
-    <div id="service" className="container cont-services">
-      <h2>Services</h2>
-      <div className="services">
+    <div id="service" className="container  cont-services">
+      <h2 className="title">Services</h2>
+    
+      <div className="services es-grid-column">
         <div className="service">
           <DiJava size="5rem" />
           <h1>Java</h1>

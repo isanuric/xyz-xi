@@ -1,8 +1,9 @@
 import React from "react";
+const image = "../assets/images/about.jpg";
 
 export default function About() {
   return (
-    <div id="about" className="container cont-about">
+    <div id="about" className="container about">
       <div className="text">
         <h1>About</h1>
         <h5>
@@ -14,7 +15,12 @@ export default function About() {
           quas nobis.
         </h5>
       </div>
-      <div className="image"></div>
+      <div className="image">
+        <img
+          src={require("../assets/images/about.jpg")}
+          className="card-image"
+        />
+      </div>
     </div>
   );
 }

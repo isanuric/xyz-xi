@@ -21,13 +21,29 @@ body {
   background: #ccc;
 }
 
-image {
+/* Grid */
+.es-grid-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+/* Images */
+img {
   max-width: 100%;
 }
 
-.wrapper {
-  /* display: grid; */
-  /* gap: 1rem; */
+.card-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  /* border: 3px solid #ccc; */
+}
+
+@media(min-width: 600px) {
+  .card-image.featured:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
 
 .button {
@@ -36,6 +52,14 @@ image {
   padding: .6rem 1.3rem;
   text-decoration: none;
   border: 0;
+}
+
+/* Titles */
+.title {
+  margin-bottom: 5rem;
+  color: var(--light);
+  text-align: center;
+  font-size: 3rem;
 }
 
 
@@ -109,54 +133,41 @@ image {
 
 /* Container for general settings */
 .container {
-  padding: 10rem 5rem;
+  padding: 0 5rem;
 }
 
 /* About */
-.cont-about {
+.about {
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: rgb(18, 61, 28, .5);
 
 }
 
-.cont-about .text {
+.about .text {
   padding-right: 3rem;
+  margin-bottom: 1rem;
   color: var(--light);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.cont-about .image {
-  background: url(assets/images/about.jpg);
-  background-size: cover;
-  background-position: center;
-  width: auto;
-  height: 20rem;
+.about .image {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 
 /* Service */
 .cont-services {
-  display: grid;
-  grid-template-columns: 1fr;
   background-color: rgb(13, 49, 21);
-}
-
-.cont-services h2 {
-  margin-bottom: 5rem;
-  color: var(--light);
-  text-align: center;
-  font-size: 3rem;
 }
 
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1rem;
   background-color: rgb(13, 49, 21);
 }
@@ -170,8 +181,11 @@ image {
 }
 
 
-/* Content */
-
+/* Pictures */
+/* See .card-image and .es-grid-column at the top */
+.picture {
+  background-color: rgb(44, 52, 44);
+}
 
 
 /* Footer */
@@ -179,7 +193,6 @@ footer {
   background-color: var(--dark);
   color: var(--light);
   height: 8rem;
-  margin-top: 2rem;
 
   display: flex;
   align-items: center;
@@ -211,6 +224,7 @@ footer {
   .container {
     padding: 10rem 5rem;
   }
+
 }
 
 @media(max-width: 600px){
@@ -231,7 +245,6 @@ footer {
   }
 
   .about {
-    display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
   }
 }
