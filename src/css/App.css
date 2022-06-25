@@ -50,9 +50,17 @@ img {
 .button {
   background-color: var(--dark);
   color: var(--light);
+  margin: 1rem 0;
   padding: .6rem 1.3rem;
   text-decoration: none;
+  cursor: pointer;
   border: 0;
+  box-shadow: var(--shadow);
+  transition-duration: 0.8s;
+}
+.button:hover {
+  background-color: var(--light);
+  color: var(--dark);
 }
 
 /* Titles */
@@ -109,7 +117,7 @@ img {
 /* Top Picture */
 .top-container {
   min-height: 60rem;
-  background: url(assets/images/pexels-anni-roenkae-2317711.jpg);
+  background: url(../assets/images/pexels-anni-roenkae-2317711.jpg);
   background-size: cover;
   background-position: center;
   /* inside the container */
@@ -206,33 +214,40 @@ img {
 
 #quote01 {
   grid-area: qoute01;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(65, 69, 30);
+
 }
 
 #quote02 {
   grid-area: qoute02;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(68, 69, 40);
 }
 
 #quote03 {
   grid-area: qoute03;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(68, 76, 56);
 }
 
 #quote04 {
   grid-area: qoute04;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(68, 69, 50);
 }
 
 #quote05 {
   grid-area: qoute05;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(68, 60, 50);
 
 }
 
 #quote06 {
   grid-area: qoute06;
-  border: var(--border);
+  /* border: var(--border); */
+  background-color: rgb(68, 79, 30);
 }
 
 .quote .title {
@@ -260,6 +275,8 @@ img {
   max-width: 8rem;
   max-height: 8rem;
   padding: 1rem;
+  box-shadow: var(--shadow);
+  
 }
 
 .card-title {
@@ -273,6 +290,19 @@ img {
   color: var(--light);
   font-size: .8rem;
   font-weight: 100;
+}
+
+/* React: Add to Array */
+.add-to-array {
+  background-color: rgb(139, 118, 118);
+}
+.add-to-array .display {
+  display: flex;
+  flex-wrap: wrap;
+}
+.display p{
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import "./App.css";
+import "./css/App.css";
+import "./css/animation.css"
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Service from "./components/Service";
@@ -7,6 +8,8 @@ import TopContainer from "./components/TopContainer";
 import Footer from "./components/Footer";
 import Picture from "./components/Picture";
 import Quote from "./components/Quote";
+import AddToArray from "./components/react/AddToArray";
+
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
       <Service />
       <Picture />
       <Quote />
+      <AddToArray />
+
       <Footer />
     </Fragment>
   );
