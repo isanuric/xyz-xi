@@ -1,0 +1,21 @@
+.squares .display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: .5rem;
+    justify-items: center;
+}
+
+@media (min-width: 600px) {
+    .squares .display  {
+        grid-template-columns: repeat(3, minmax(10rem, 1fr));        
+    }
+    
+}
+
+.box {
+    width: 7rem;
+    height: 7rem;
+    border: .3rem solid;
+    border-radius: 5%;
+    cursor: pointer;
+}

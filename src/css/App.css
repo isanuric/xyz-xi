@@ -257,7 +257,8 @@ img {
 }
 
 .quote .card {
-  padding: 1rem;
+  /* padding: 1rem; */
+  margin: .2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,7 +276,7 @@ img {
   max-width: 8rem;
   max-height: 8rem;
   padding: 1rem;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   
 }
 
@@ -290,6 +291,7 @@ img {
   color: var(--light);
   font-size: .8rem;
   font-weight: 100;
+  padding: .8rem;
 }
 
 /* React: Add to Array */
@@ -305,6 +307,15 @@ img {
   font-size: 1.5rem;
 }
 
+/* React Squares */
+.squares {
+  background-color: rgb(114, 93, 93);
+}
+.squares .subtitle {
+  font-size: 1.5rem;
+  margin: .8rem;
+}
+
 
 /* Footer */
 footer {
@@ -315,7 +326,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 

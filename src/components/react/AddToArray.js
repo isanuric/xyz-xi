@@ -26,7 +26,7 @@ export default function AddToArray() {
   return (
     <div className="container add-to-array">
         <div className="title">React I</div>
-      <h1 className="anim01">useState</h1>
+      <h1>useState</h1>
       <button className="button" onClick={addToArray}>
         Add new Element
       </button>
